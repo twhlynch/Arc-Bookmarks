@@ -4,20 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Arc Bookmarks</title>
-		<style></style>
 		<script src="index.js" defer></script>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<main>
-			<h1>Arc Pinned Pages to bookmarks.html Tool</h1>
+			<h1>Convert Arc sidebar data to bookmarks.html</h1>
 			<span>
-				main On MacOS your pinned pages are in
+				On MacOS your pinned pages are in
 				<pre>
 ~/Library/Application Support/Arc/StorableSidebar.json</pre
 				>
 			</span>
-			<input id="input" type="file" name="input" />
-			<button id="download">Download</button>
+			<label for="input" id="file-label">Choose a file...</label>
+			<input id="input" type="file" name="input" accept=".json" hidden />
 		</main>
 	</body>
 </html>

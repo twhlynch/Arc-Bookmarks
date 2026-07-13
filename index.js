@@ -1,7 +1,6 @@
 const inputElement = document.getElementById('input');
-const downloadElement = document.getElementById('download');
 
-downloadElement.addEventListener('click', () => {
+inputElement.addEventListener('change', () => {
 	const files = inputElement.files;
 	if (files.length) {
 		const reader = new FileReader();
