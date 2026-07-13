@@ -53,7 +53,7 @@ function convertJsonToBookmarks(items) {
 <DL><p>
   <DT><H3 PERSONAL_TOOLBAR_FOLDER="true">Bookmarks Bar</H3>
   <DL><p>
-    ${items.map((item) => createBookmark(item))}
+    ${items.map((item) => createBookmark(item)).join("\n")}
   </DL><p>
 </DL><p>
 `;
@@ -66,7 +66,7 @@ function createBookmark(item) {
     ? `
 <DT><H3>${item.title}</H3>
 <DL><p>
-  ${item.children.map((child) => createBookmark(child))}
+  ${item.children.map((child) => createBookmark(child)).join("\n")}
 </DL><p>
 `
     : `
